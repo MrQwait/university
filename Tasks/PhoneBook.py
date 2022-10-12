@@ -1,13 +1,16 @@
 tk={}
 NameK=[]
-def NameCorrector(name):
+def NameCorrector():
+    name = input('Введите имя и фамилию контакта \n')
     name.lower()
-    brokenName=name.split(' ')
-    brokenName[0]=brokenName[0].capitalize()
-    brokenName[1]=brokenName[1].capitalize()
-    name=brokenName[0]+' '+brokenName[1]
+    name_surname = name.split(' ')
+    for i in range(0, len(name_surname)):
+        name_surname[i] = name_surname[i].capitalize()
+    name = ' '.join(name_surname)
     return name
-def NumberCorrector(nt):
+
+def NumberCorrector():
+    nt = input('Введите номер телефона контакта \n')
     nt = nt.replace(' ', '').replace('-', '')
     if nt[:2] == '+7' and len(nt) == 12:
         return nt
@@ -19,57 +22,40 @@ def NumberCorrector(nt):
         return nt
     else:
         print('Неверно введен номер телефона')
-        return 0
-def NPN(a):
-    if a == 1:
-        print('Введите имя и фамилию контакта')
-        name=input()
-        print('Введите номер телефона контакта ')
-        nt=input()
-        if NumberCorrector(nt)!=0:
-            NameK.append(NameCorrector(name))
-            tk[NameCorrector(name)]=NumberCorrector(nt)
-    if a == 2:
-        print('Введите имя контакта, которое хотите удалить')
-        name=input()
-        name=NameCorrector(name)
-        if name in tk:
-            tk.pop(name)
+        return NumberCorrector()
+
+def addContact(nameAdd,ntAdd):
+        NameK.append(nameAdd)
+        tk[nameAdd]=ntAdd
+        print('Контакт добавлен')
+
+def delcontact(delname):
+        if delname in tk:
+            tk.pop(delname)
             print('Контакт удален')
         else:
             print('Такого контакта нет')
-    if a == 4:
-        print('Введите имя и фамилию контакта, телефон которого вы хотите изменить')
-        name = input()
-        name = NameCorrector(name)
-        if name in tk:
-            print('Введите новый номер телефона')
-            nt=input()
-            nt=NumberCorrector(nt)
-            if nt!=0:
-                tk[name]=nt
-                print('Телефон контакта изменён')
+
+def changeContact(CCname):
+        if CCname in tk:
+            tk[CCname]=NumberCorrector()
+            print('Телефон контакта изменён')
         else:
             print('Такого контакта нет')
 
 while True:
-    print('')
-    print('1 - Добавить контакт')
-    print('2 - Удалить контакт')
-    print('3 - Просмотреть телефонную книгу')
-    print('4 - Изменить номер телефона по имени')
-    print('5 - закончить программу')
+    print('\n 1 - Добавить контакт \n 2 - Удалить контакт \n 3 - Просмотреть телефонную книгу \n 4 - Изменить номер телефона по имени \n 5 - закончить программу')
     a=int(input())
     if a==1:
-        NPN(a)
+        addContact(NameCorrector(),NumberCorrector())
     if a==2:
-        NPN(a)
+        delcontact(NameCorrector())
     if a==3:
         for i in range (len(NameK)):
             if NameK[i] in tk:
                 print(NameK[i],tk[NameK[i]])
     if a==4:
-        NPN(a)
+        changeContact(NameCorrector())
     if a==5:
         break
 
