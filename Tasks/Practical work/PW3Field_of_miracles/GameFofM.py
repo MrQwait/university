@@ -23,15 +23,11 @@ def game():
         for i in range(len(hidden_word)):
             str_hidden_word=str_hidden_word+hidden_word[i]
         if str_hidden_word==selected_word:
-            win()
-            # рекорд
             break
 
         player_choice=input(f'{str_hidden_word}|♥{life}\nНазовите букву или слово целиком: ')
 
         if player_choice == selected_word:
-            win()
-            # рекорд
             break
         elif player_choice in selected_word:
             for i in range(len(selected_word)):
@@ -42,19 +38,23 @@ def game():
             life=life-1
     if life==0:
         print(f'Вы програли\nЗагаданное слово:{selected_word}')
-
-        #рекорд
-def win():
-    print('Вы выйграли! Приз в студию!')
-
-
-
+        return 0
+    else:
+        print('Вы выйграли! Приз в студию!')
+        return 1
+c_win=0
 ws=''
 while True:
     answer=input(f'Хотите сыграть в игру {ws} ?\nНапишите "да" или "нет"\n')
     if answer == 'да':
         ws='ещё раз'
-        game()
+        if game()==1:
+            c_win=c_win+1
+            print(f'Ваш текущий рекорд: {c_win}')
+            max_record(c_win)
+        else:
+            c_win=0
+            print('Сброс текущего рекорда\n')
     if answer == 'нет':
         print('Хорошего дня!')
         text.close()
