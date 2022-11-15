@@ -1,11 +1,12 @@
 def read_file(t):
     f=open(f'{t}', encoding='utf-8')
     text=f.readlines()
+    s='()<>!;=-+*&?,.$[]{}'
     for i in range(len(text)):
-        text[i]=text[i].replace('\n','')
-        text[i]=text[i].replace('.','')
-        text[i]=text[i].replace(',', '')
-        text[i] = text[i].replace('!', '')
+        text[i] = text[i].replace(f'\n', '')
+        for j in range(len(s)):
+            if s[j] in text[i]:
+                text[i]=text[i].replace(f'{s[j]}','')
     words=[]
     for i in range(len(text)):
         if text[i].count(' ')>0:
@@ -28,6 +29,7 @@ def save_file(text, words):
             if alphabet[i]==s[0]:
                 sort_words.append(s)
     f = open(f'{text}', encoding='utf-8',mode='w')
+    f.write(f'Кол-во уникальных слов: {len(sort_words)}\n')
     for i in range(len(sort_words)):
         f.write(sort_words[i]+'\n')
     f.close()
