@@ -1,15 +1,19 @@
 def error_options(a):
+    '''
+    :param a: файл
+    :return: список чисел
+    '''
     try:
         f=open(a)
         f.readline()
-        s=f.readlines()
-        if len(s)==0:
+        str: list[str] = f.readlines()
+        if len(str)==0:
             print('Не тот файл')
         else:
-            for i in range(len(s)):
-                s[i]=s[i].replace('\n','')
-                s[i]=int(s[i])
-            print(s)
+            for i in range(len(str)):
+                str[i]=str[i].replace('\n','')
+                str[i]=int(str[i])
+            print(str)
             #break
     except FileNotFoundError:
         print('Такого файла нет')
