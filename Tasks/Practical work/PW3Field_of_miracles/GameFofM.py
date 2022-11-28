@@ -1,31 +1,37 @@
 from functions_for_PW3 import *
 def game():
+    '''
+    Игра "Поле чудес" на 1 игрока с выбором сложности игры.
+    :return: 0 - если проиграл
+             1 - если выиграл
+    '''
     while True:
-        answer=input('Выберите уровень сложности\n1 - Легкий  (7 жизней)\n2 - Средний (5 жизней)\n3 - Сложный (3 жизни)\n')
+        answer: str = input('Выберите уровень сложности\n1 - Легкий  (7 жизней)\n'
+                            '2 - Средний (5 жизней)\n3 - Сложный (3 жизни)\n')
         if answer == '1':
-            life = 7
+            life: int = 7
             break
         if answer == '2':
-            life = 5
+            life: int = 5
             break
         if answer == '3':
-            life = 3
+            life: int = 3
             break
-    selected_word=words()
+    selected_word: str = words()
     #print(selected_word)
 
-    hidden_word=[]
+    hidden_word: list[str] = []
     for i in range(len(selected_word)):
         hidden_word.append('\u25A0 ')
 
     while life>0:
-        str_hidden_word = ''
+        str_hidden_word: str = ''
         for i in range(len(hidden_word)):
             str_hidden_word=str_hidden_word+hidden_word[i]
         if str_hidden_word==selected_word:
             break
 
-        player_choice=input(f'{str_hidden_word}|♥{life}\nНазовите букву или слово целиком: ')
+        player_choice: str =input(f'{str_hidden_word}|♥{life}\nНазовите букву или слово целиком: ')
 
         if player_choice == selected_word:
             break
@@ -42,12 +48,12 @@ def game():
     else:
         print('Вы выйграли! Приз в студию!')
         return 1
-c_win=0
-ws=''
+c_win: int =0
+insert: str =''
 while True:
-    answer=input(f'Хотите сыграть в игру {ws} ?\nНапишите "да" или "нет"\n')
+    answer: str = input(f'Хотите сыграть в игру {insert} ?\nНапишите "да" или "нет"\n')
     if answer == 'да':
-        ws='ещё раз'
+        insert='ещё раз'
         if game()==1:
             c_win=c_win+1
             print(f'Ваш текущий рекорд: {c_win}')
