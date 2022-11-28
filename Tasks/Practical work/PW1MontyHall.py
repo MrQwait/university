@@ -1,10 +1,17 @@
 import random
-def  monty_hall(k):
-    count = 0
-    count_changed_choice = 0
 
-    for i in range(0, k):
-        a = [0, 0, 1]
+
+def monty_hall(count_plays: int) -> str:
+    '''
+    Парадокс Монти Холла
+    :param count_plays: число (Количество игр)
+    :return: процент побед
+    '''
+    count: int = 0
+    count_changed_choice: int = 0
+
+    for i in range(0, count_plays):
+        a: list[int] = [0, 0, 1]
         player_choice = random.choice(a)
         if player_choice == 1:
             count += 1
@@ -13,7 +20,7 @@ def  monty_hall(k):
             a.remove(player_choice)
             if a[0] == 1:
                 count_changed_choice += 1
-    print(int(count_changed_choice / (count + count_changed_choice) * 100),'%',sep='')
+    return (str(int(count_changed_choice / (count + count_changed_choice) * 100)) + '%')
 
-k=int(input())
-monty_hall(k)
+
+print(monty_hall(int(input())))
