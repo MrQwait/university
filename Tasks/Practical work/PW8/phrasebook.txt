@@ -1,0 +1,108 @@
+я | . | 9
+вы | vy | 5
+и | And | 5
+который | which the | 4
+ли | Lee | 3
+свой | its own | 3
+нет | none | 3
+друг | friend | 3
+хотеть | want | 3
+на | on | 3
+не | not | 3
+а | а | 2
+быть | be | 2
+неужели | неужели | 2
+бы | would | 2
+женщина | woman | 2
+чтоб | so that | 2
+мой | my | 2
+из | from | 2
+или | or | 2
+думать | think | 2
+о | about | 2
+один | Alone | 2
+бог | god | 2
+написать | Comment | 1
+завещание | testament | 1
+вдруг | suddenly | 1
+спросить | to ask | 1
+вернер | Werner | 1
+если | if | 1
+убить | kill | 1
+наследник | legatee | 1
+отыскаться | отыскаться | 1
+сам | self | 1
+у | - | 1
+послать | Send | 1
+последний | last | 1
+простить | forgive | 1
+покачать | rock | 1
+голова | head | 1
+свет | light | 1
+оставить | to let the | 1
+чтонибыть | thatnibyte | 1
+память | memory | 1
+доктор | Doctor | 1
+отвечать | answer | 1
+он | ?? | 1
+раскрыть | reveal | 1
+душа | Soul | 1
+видеть | see | 1
+выжить | To survive | 1
+тот | Thoth | 1
+год | year | 1
+когда | when | 1
+умирать | to die | 1
+произносить | spell | 1
+имя | name | 1
+любезный | kind | 1
+завещать | bequeath | 1
+клочок | Flocculus | 1
+напомадить | напомадить | 1
+ненапомадить | непомадить | 1
+волос | . | 1
+близкий | close | 1
+возможный | Possible | 1
+смерть | вестник | 1
+себя | it | 1
+иной | Other | 1
+делать | make | 1
+это | is | 1
+завтра | tomorrow | 1
+забыть | forget | 1
+плохой | bad | 1
+возвести | escalate | 1
+счёт | account | 1
+знать | Aristocracy | 1
+какой | which | 1
+небылица | fiction | 1
+обнимать | to embrace | 1
+другой | other | 1
+смеяться | laugh | 1
+надо | надо | 1
+возбудить | agitate | 1
+в | in | 1
+немой | Mute | 1
+ревность | jealousy | 1
+к | к | 1
+усопший | усопший | 1
+с | p. | 1
+они | Oni | 1
+жизненный | Coincidence | 1
+буря | Windstorm | 1
+вынести | take out | 1
+только | only | 1
+несколько | several | 1
+идея | Idea | 1
+ни | HN | 1
+чувство | Feeling | 1
+давно | days ago | 1
+уж | oh, yeah. | 1
+жить | Ikiru | 1
+сердце | heart | 1
+головоюхарактёр | headhunter | 1
+прагматический | Pragmatic | 1
+установка | unit | 1
+соответственно | specimen masses, respectively | 1
+литературно | literary | 1
+обработать | Process | 1
